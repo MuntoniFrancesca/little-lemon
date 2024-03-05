@@ -25,12 +25,26 @@ function BookingForm() {
             <section>
                 <form onSubmit={handleSubmit}>
                     <fieldset>
+                        {/* to set up the date */}
                         <div>
                             <label htmlFor='book-date'>Choose Date</label>
                             <input id='book-date' value={date} onChange={(e) => handleChange(e.target.value)} type='date' required />
                         </div>
-                    </fieldset>
 
+                        {/* to set up the time */}
+                        <div>
+                            <label htmlFor='book-time'>Choose Time:</label>
+                            <select id="book-time" value={time} onChange={(e) => setTime(e.target.value)}>
+                                <option value="">Select a Time</option>
+                                {
+                                    props.availableTimes.availableTimes.map(availableTimes => { return <option key={availableTimes}>{availableTimes}</option> })
+                                }
+                            </select>
+                        </div>
+
+
+
+                    </fieldset>
                 </form>
             </section>
         </header>
