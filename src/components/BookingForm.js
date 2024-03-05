@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 function BookingForm() {
     const [date, setDate] = useState("");
     const [time, setTime] = useState("");
-    const [guest, setGuest] = useState("");
+    const [guests, setGuests] = useState("");
     const [occasion, setOccasion] = useState("");
 
 
@@ -15,7 +15,7 @@ function BookingForm() {
 
     const handleChange = (e) => {
         setDate(e);
-        props.dispatchEvent(e);
+        props.dispatch(e);
 
     }
 
@@ -40,6 +40,25 @@ function BookingForm() {
                                     props.availableTimes.availableTimes.map(availableTimes => { return <option key={availableTimes}>{availableTimes}</option> })
                                 }
                             </select>
+                        </div>
+
+                        {/* to set up the number of guests */}
+                        <div>
+                            <label htmlFor='book-guests'>Number Oo Guests:</label>
+                            <input id='book-guests' min ='1' value={guests} onChange={(e) => setGuests(e.target.value)}/>
+                        </div>
+
+                        {/* to choose occasion */}
+                        <div>
+                        <label htmlFor='book-occasion'>Occasion:</label>
+                        <select id='book-occasion' key={occasion} onChange={e => setOccasion (e.target.value)}>
+                            <option>Birthday</option>
+                            <option>Anniversary</option>
+                        </select>
+                        </div>
+                        <div className='btnReceive'>
+                            <input aria-Label='On Click' type='submit' value={"Make your Reservation"}/>
+
                         </div>
 
 
