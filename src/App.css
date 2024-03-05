@@ -96,39 +96,4 @@ nav ul li a:hover{
   .bar{
     background: #333333;
   }
-
-  .banner-img{
-    display: none;
-  }
-
-  form, .comfirm{
-    padding: 10px 8%;
-  }
-
-
-  .header section, .menu-container{
-    padding: 10px 8%;
-  }
-  .menu-container{
-    margin: 20px 0;
-  }
-  .menu-header{
-    justify-content: flex-start;
-  }
-
-  .menu-items{
-    width: 100%;
-  }
-
-  footer section{
-    padding: 10px 8%;
-    flex-direction: column;
-  }
-  .company-info p{
-    width: 100%;
-  }
-}
-
-.hidden{
-  display: none;
 }
