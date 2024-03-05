@@ -1,15 +1,15 @@
-
 import './App.css';
-import Header from './components/Header';
 import Nav from './components/Nav';
-import BookingForm from './components/BookingForm';
+import Main from './components/Main';
+import { BrowserRouter } from 'react-router-dom';
 
 function App() {
   return (
     <>
+    <BrowserRouter>
     <Nav/>
-    <Header/>
-    <BookingForm/>
+    <Main/>
+    </BrowserRouter>
     </>
   );
 }

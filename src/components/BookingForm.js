@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 
-function BookingForm() {
+function BookingForm(props) {
     const [date, setDate] = useState("");
     const [time, setTime] = useState("");
     const [guests, setGuests] = useState("");
@@ -10,7 +10,7 @@ function BookingForm() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        props.SubmitForm(e);
+        props.submitForm(e);
     }
 
     const handleChange = (e) => {
@@ -44,7 +44,7 @@ function BookingForm() {
 
                         {/* to set up the number of guests */}
                         <div>
-                            <label htmlFor='book-guests'>Number Oo Guests:</label>
+                            <label htmlFor='book-guests'>Number Of Guests:</label>
                             <input id='book-guests' min ='1' value={guests} onChange={(e) => setGuests(e.target.value)}/>
                         </div>
 
