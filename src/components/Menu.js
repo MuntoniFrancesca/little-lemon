@@ -35,7 +35,7 @@ function Menu() {
             <div className='cards'>
                 {
                     cards.map(card => <div key={card.id} className='menu-items'>
-                        <img src={card.image} alt='' />
+                        <img src={card.image} alt='picture of dish' />
                         <div className='menu-content'>
                             <div className='heading'>
                                 <h5>{card.title}</h5>
