@@ -37,6 +37,9 @@ function Footer() {
           </ul>
         </div>
       </section>
+      <div className="copyright">
+                <p>© 2023 Little Lemon Ltd. All rights reserved.</p>
+            </div>
     </footer>
   )
 }
